@@ -44,8 +44,8 @@
 		B6F51D202857767B0071A894 = {
 			isa = PBXGroup;
 			children = (
-				B6F51D2B2857767B0071A894 /* Tasks */,
 				B6F51D2A2857767B0071A894 /* Products */,
+				B6F51D2B2857767B0071A894 /* Tasks */,
 			);
 			sourceTree = "<group>";
 		};
