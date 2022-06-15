@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Tasks
-//
-//  Created by sweintern on 6/13/22.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -41,6 +34,8 @@ class ViewController: UIViewController {
         
         for x in 0..<count {
             
+            // PAY ATTENTION TO THIS. TASKS ARE SAVED HERE!!!
+            
             if let task = UserDefaults().value(forKey: "task_\(x + 1)") as? String{
                 tasks.append(task)
             }
@@ -60,8 +55,15 @@ class ViewController: UIViewController {
         }
         navigationController?.pushViewController(vc, animated: true)
     }
-
-
+    
+    ///////////////////
+    override func viewWillAppear(_ animated: Bool) {
+        if let taskList = userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
+            self.tasks = taskList
+            self.tableView.reloadData()
+        }
+    }
+    /////////////////////
 }
 
 extension ViewController: UITableViewDelegate {

@@ -73,7 +73,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zuc-Xo-akk"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.77730439065657941" green="0.77730439065657941" blue="0.77730439065657941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TEm-4P-MBc" firstAttribute="leading" secondItem="zuc-Xo-akk" secondAttribute="leading" constant="20" id="CF6-ae-Be3"/>
                             <constraint firstItem="TEm-4P-MBc" firstAttribute="top" secondItem="zuc-Xo-akk" secondAttribute="top" constant="20" id="Cap-ou-rNH"/>
