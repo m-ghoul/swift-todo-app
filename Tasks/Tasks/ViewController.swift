@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Tasks
-//
-//  Created by sweintern on 6/13/22.
-//
-
 import UIKit
 
 class ViewController: UIViewController {

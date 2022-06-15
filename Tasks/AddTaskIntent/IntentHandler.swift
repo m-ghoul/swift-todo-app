@@ -1,10 +1,3 @@
-//
-//  IntentHandler.swift
-//  AddTaskIntent
-//
-//  Created by sweintern on 6/13/22.
-//
-
 import Intents
 
 class IntentHandler: INExtension {
