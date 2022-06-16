@@ -10,8 +10,8 @@
 		B6D778A52859F71E00B53B51 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D778A42859F71E00B53B51 /* Intents.framework */; };
 		B6D778A82859F71E00B53B51 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D778A72859F71E00B53B51 /* IntentHandler.swift */; };
 		B6D778BD2859F71E00B53B51 /* TaskTrackerIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B6D778A22859F71E00B53B51 /* TaskTrackerIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B6D778C62859F77600B53B51 /* TaskTrackerIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B6D778C52859F77600B53B51 /* TaskTrackerIntents.intentdefinition */; };
-		B6D778C72859F77600B53B51 /* TaskTrackerIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B6D778C52859F77600B53B51 /* TaskTrackerIntents.intentdefinition */; };
+		B6E72004285AFB55005E4571 /* TaskTrackerIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B6E72007285AFB55005E4571 /* TaskTrackerIntents.intentdefinition */; };
+		B6E72005285AFB55005E4571 /* TaskTrackerIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B6E72007285AFB55005E4571 /* TaskTrackerIntents.intentdefinition */; };
 		B6F51D2D2857767B0071A894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F51D2C2857767B0071A894 /* AppDelegate.swift */; };
 		B6F51D2F2857767B0071A894 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F51D2E2857767B0071A894 /* SceneDelegate.swift */; };
 		B6F51D312857767B0071A894 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F51D302857767B0071A894 /* ViewController.swift */; };
@@ -52,7 +52,8 @@
 		B6D778A42859F71E00B53B51 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		B6D778A72859F71E00B53B51 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		B6D778A92859F71E00B53B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6D778C52859F77600B53B51 /* TaskTrackerIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TaskTrackerIntents.intentdefinition; sourceTree = "<group>"; };
+		B6E72006285AFB55005E4571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/TaskTrackerIntents.intentdefinition; sourceTree = "<group>"; };
+		B6E72009285AFB57005E4571 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TaskTrackerIntents.strings; sourceTree = "<group>"; };
 		B6F51D292857767B0071A894 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F51D2C2857767B0071A894 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F51D2E2857767B0071A894 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +124,7 @@
 		B6F51D2B2857767B0071A894 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				B6D778C52859F77600B53B51 /* TaskTrackerIntents.intentdefinition */,
+				B6E72007285AFB55005E4571 /* TaskTrackerIntents.intentdefinition */,
 				B6D7789D2859F6C100B53B51 /* Tasks.entitlements */,
 				B6F51D2C2857767B0071A894 /* AppDelegate.swift */,
 				B6F51D2E2857767B0071A894 /* SceneDelegate.swift */,
@@ -239,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6D778C72859F77600B53B51 /* TaskTrackerIntents.intentdefinition in Sources */,
+				B6E72005285AFB55005E4571 /* TaskTrackerIntents.intentdefinition in Sources */,
 				B6D778A82859F71E00B53B51 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +251,7 @@
 			files = (
 				B6F51D312857767B0071A894 /* ViewController.swift in Sources */,
 				B6F51D412857802F0071A894 /* EntryViewController.swift in Sources */,
-				B6D778C62859F77600B53B51 /* TaskTrackerIntents.intentdefinition in Sources */,
+				B6E72004285AFB55005E4571 /* TaskTrackerIntents.intentdefinition in Sources */,
 				B6F51D43285780500071A894 /* TaskViewController.swift in Sources */,
 				B6F51D2D2857767B0071A894 /* AppDelegate.swift in Sources */,
 				B6F51D2F2857767B0071A894 /* SceneDelegate.swift in Sources */,
@@ -268,6 +269,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B6E72007285AFB55005E4571 /* TaskTrackerIntents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6E72006285AFB55005E4571 /* Base */,
+				B6E72009285AFB57005E4571 /* en */,
+			);
+			name = TaskTrackerIntents.intentdefinition;
+			sourceTree = "<group>";
+		};
 		B6F51D322857767B0071A894 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

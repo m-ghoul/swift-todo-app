@@ -5,7 +5,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         donateIntent()
@@ -14,8 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func donateIntent() {
         let intent = TaskTrackerIntent()
         intent.suggestedInvocationPhrase = "Add New Task"
+        intent.title = "SiriKit Test"
         let interaction = INInteraction(intent: intent, response: nil)
-        
         interaction.donate { (error) in
             if error != nil {
                 if let error = error as NSError? {
@@ -41,7 +40,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
-
-
 }
-

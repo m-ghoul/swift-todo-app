@@ -20,6 +20,16 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        self.title = "Tasks"
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        if !UserDefaults().bool(forKey: "setup") {
+            UserDefaults().set(true, forKey: "setup")
+            UserDefaults().set(0, forKey: "count")
+        }
+        
         if let taskList = userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
             self.tasks = taskList
             self.tableView.reloadData()

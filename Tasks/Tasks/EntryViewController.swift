@@ -29,6 +29,5 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
         completion?(true)
-        
     }
 }
