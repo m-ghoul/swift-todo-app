@@ -35,7 +35,7 @@ class ViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
-        present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
