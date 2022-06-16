@@ -3,41 +3,32 @@ import UIKit
 class EntryViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var field: UITextField!
-    
-    var update: (() -> Void)?
+    var completion: ((Bool) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         field.delegate = self
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveTask))
-
-        // Do any additional setup after loading the view.
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         saveTask()
-        
         return true
     }
     
     @objc func saveTask() {
-        guard let text = field.text, !text.isEmpty else {
-            return
+        var data = [[String: Any]]()
+        data.append(["title": field.text ?? ""])
+        guard let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks") else { return }
+        if let taskData = userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
+            data.append(contentsOf: taskData)
+            userDefaults.setValue(data, forKey: "TaskData")
+        } else {
+            userDefaults.setValue(data, forKey: "TaskData")
         }
-        
-        guard let count = UserDefaults().value(forKey: "count") as? Int else {
-            return
-        }
-        
-        let newCount = count + 1
-        
-        UserDefaults().set(newCount, forKey: "count")
-        UserDefaults().set(text, forKey: "task_\(newCount)")
-        
-        update?()
-        
+        self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
+        completion?(true)
+        
     }
 }
