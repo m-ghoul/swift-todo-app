@@ -7,7 +7,6 @@ class IntentHandler: INExtension {
         }
        return TaskTrackerHandler()
     }
-    
 }
 
 class TaskTrackerHandler: NSObject, TaskTrackerIntentHandling {
@@ -29,12 +28,14 @@ class TaskTrackerHandler: NSObject, TaskTrackerIntentHandling {
     func addTask(title: String) -> Int {
         var data = [[String:Any]]()
         data.append(["title": title])
-        if let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks") {
+        if let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks.tempdb") {
             if let taskData = userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
                 data.append(contentsOf: taskData)
-                userDefaults.setValue(data, forKey: "TaskData")
+                userDefaults.set(data, forKey: "TaskData")
+                userDefaults.synchronize()
             } else {
-                userDefaults.setValue(data, forKey: "TaskData")
+                userDefaults.set(data, forKey: "TaskData")
+                userDefaults.synchronize()
             }
         }
        return data.count

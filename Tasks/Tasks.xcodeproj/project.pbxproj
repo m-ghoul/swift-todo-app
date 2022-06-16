@@ -47,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B6D4F896285B4D8300191089 /* TaskTrackerIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskTrackerIntent.entitlements; sourceTree = "<group>"; };
 		B6D7789D2859F6C100B53B51 /* Tasks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tasks.entitlements; sourceTree = "<group>"; };
 		B6D778A22859F71E00B53B51 /* TaskTrackerIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskTrackerIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D778A42859F71E00B53B51 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
@@ -96,6 +97,7 @@
 		B6D778A62859F71E00B53B51 /* TaskTrackerIntent */ = {
 			isa = PBXGroup;
 			children = (
+				B6D4F896285B4D8300191089 /* TaskTrackerIntent.entitlements */,
 				B6D778A72859F71E00B53B51 /* IntentHandler.swift */,
 				B6D778A92859F71E00B53B51 /* Info.plist */,
 			);
@@ -300,6 +302,7 @@
 		B6D778C22859F71E00B53B51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TaskTrackerIntent/TaskTrackerIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53KAYH5678;
@@ -325,6 +328,7 @@
 		B6D778C32859F71E00B53B51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TaskTrackerIntent/TaskTrackerIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53KAYH5678;

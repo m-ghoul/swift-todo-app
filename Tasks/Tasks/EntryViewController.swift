@@ -19,14 +19,15 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     @objc func saveTask() {
         var data = [[String: Any]]()
         data.append(["title": field.text ?? ""])
-        guard let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks") else { return }
+        guard let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks.tempdb") else { return }
         if let taskData = userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
             data.append(contentsOf: taskData)
-            userDefaults.setValue(data, forKey: "TaskData")
+            userDefaults.set(data, forKey: "TaskData")
+            userDefaults.synchronize()
         } else {
-            userDefaults.setValue(data, forKey: "TaskData")
+            userDefaults.set(data, forKey: "TaskData")
+            userDefaults.synchronize()
         }
-        self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
         completion?(true)
     }

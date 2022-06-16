@@ -5,7 +5,7 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
     var tasks: [[String: Any]] = []
-    let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks")!
+    let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks.tempdb")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +24,7 @@ class ViewController: UIViewController {
         self.title = "Tasks"
         tableView.delegate = self
         tableView.dataSource = self
-        
-        if !UserDefaults().bool(forKey: "setup") {
-            UserDefaults().set(true, forKey: "setup")
-            UserDefaults().set(0, forKey: "count")
-        }
+
         
         if let taskList = userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
             self.tasks = taskList
