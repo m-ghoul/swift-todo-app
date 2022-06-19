@@ -1,11 +1,12 @@
 import UIKit
+import IntentsUI
 
 class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
 
     var tasks: [[String: Any]] = []
-    let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks.tempdb")!
+    let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks")!
 
     override func viewDidLoad() {
         super.viewDidLoad()

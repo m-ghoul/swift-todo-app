@@ -19,7 +19,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     @objc func saveTask() {
         var data = [[String: Any]]()
         data.append(["title": field.text ?? ""])
-        guard let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks.tempdb") else { return }
+        guard let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks") else { return }
         if let taskData = userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
             data.append(contentsOf: taskData)
             userDefaults.set(data, forKey: "TaskData")
