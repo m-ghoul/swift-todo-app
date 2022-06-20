@@ -477,6 +477,7 @@
 				DEVELOPMENT_TEAM = 53KAYH5678;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tasks/Info.plist;
+				INFOPLIST_KEY_NSSiriUsageDescription = "A Task will be sent from Siri to Tasks";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -507,6 +508,7 @@
 				DEVELOPMENT_TEAM = 53KAYH5678;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tasks/Info.plist;
+				INFOPLIST_KEY_NSSiriUsageDescription = "A Task will be sent from Siri to Tasks";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

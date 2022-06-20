@@ -37,30 +37,26 @@
 					<string>Add a task with the title "${title}"</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>lZlRoo</string>
-					<key>INIntentParameterCombinationUpdatesLinked</key>
-					<true/>
 				</dict>
 			</dict>
 			<key>INIntentName</key>
 			<string>TaskTracker</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key>title</key>
+				<key></key>
 				<dict>
-					<key>INIntentParameterCombinationIsLinked</key>
+					<key>INIntentParameterCombinationIsPrimary</key>
 					<true/>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>Add a task with the title "${title}"</string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>xiQbEW</string>
 				</dict>
 			</dict>
 			<key>INIntentParameters</key>
 			<array>
 				<dict>
 					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
 					<string>Title</string>
