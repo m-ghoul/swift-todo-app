@@ -47,16 +47,22 @@
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
 					<true/>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string>Add a new task to Tasks</string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>lKYBWJ</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Add new task</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>Yn9Vxn</string>
 				</dict>
 			</dict>
 			<key>INIntentParameters</key>
 			<array>
 				<dict>
 					<key>INIntentParameterConfigurable</key>
-					<true/>
-					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
 					<string>Title</string>
@@ -85,7 +91,7 @@
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
 							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>What would you like to call your task?</string>
+							<string>What would you like your new task to be called?</string>
 							<key>INIntentParameterPromptDialogFormatStringID</key>
 							<string>1YneZc</string>
 							<key>INIntentParameterPromptDialogType</key>
