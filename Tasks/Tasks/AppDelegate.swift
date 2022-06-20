@@ -5,14 +5,12 @@ import Intents
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        requestAuthorisation()
+        requestAuthorization()
         return true
     }
     
-    fileprivate func requestAuthorisation() {
+    fileprivate func requestAuthorization() {
       INPreferences.requestSiriAuthorization { status in
         if status == .authorized {
           print("Hey, Siri!")

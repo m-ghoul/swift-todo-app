@@ -12,8 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func donateIntent() {
         let intent = TaskTrackerIntent()
-        intent.suggestedInvocationPhrase = "Add New Task"
-        intent.title = "SiriKit Test"
+        //        intent.title = "SiriKit Test"
+        intent.suggestedInvocationPhrase = "I have a new to do"
         let interaction = INInteraction(intent: intent, response: nil)
         interaction.donate { (error) in
             if error != nil {
