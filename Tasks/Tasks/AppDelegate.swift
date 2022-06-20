@@ -12,9 +12,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate func requestAuthorization() {
       INPreferences.requestSiriAuthorization { status in
         if status == .authorized {
-          print("Hey, Siri!")
+          print("Siri authorization acquired")
         } else {
-          print("Nay, Siri!")
+          print("Failed to acquire Siri authorization")
         }
       }
     }
@@ -27,7 +27,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-
-
 }
 

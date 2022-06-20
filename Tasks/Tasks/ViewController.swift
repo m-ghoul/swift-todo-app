@@ -26,11 +26,10 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
-        
         if let taskList = userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
             self.tasks = taskList
             self.tableView.reloadData()
-    }
+        }
     }
     
     @IBAction func didTapAdd() {

@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func donateIntent() {
         let intent = TaskTrackerIntent()
         //        intent.title = "SiriKit Test"
-        intent.suggestedInvocationPhrase = "I have a new to do"
+        intent.suggestedInvocationPhrase = "I have a new task to do"
         let interaction = INInteraction(intent: intent, response: nil)
         interaction.donate { (error) in
             if error != nil {

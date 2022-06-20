@@ -88,38 +88,6 @@
             </objects>
             <point key="canvasLocation" x="1287" y="942"/>
         </scene>
-        <!--Task View Controller-->
-        <scene sceneID="V8I-sx-0iJ">
-            <objects>
-                <viewController storyboardIdentifier="task" id="JTp-ER-Vzy" customClass="TaskViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FPg-HK-mDh">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3t-5n-JkG">
-                                <rect key="frame" x="12" y="56" width="366" height="742"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="EEX-4O-4qt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="X3t-5n-JkG" firstAttribute="leading" secondItem="EEX-4O-4qt" secondAttribute="leading" constant="12" id="WN2-i6-D1f"/>
-                            <constraint firstItem="EEX-4O-4qt" firstAttribute="bottom" secondItem="X3t-5n-JkG" secondAttribute="bottom" constant="12" id="fNE-hk-A0C"/>
-                            <constraint firstItem="EEX-4O-4qt" firstAttribute="trailing" secondItem="X3t-5n-JkG" secondAttribute="trailing" constant="12" id="sG1-dZ-7ib"/>
-                            <constraint firstItem="X3t-5n-JkG" firstAttribute="top" secondItem="EEX-4O-4qt" secondAttribute="top" constant="12" id="xDQ-5J-tYM"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="label" destination="X3t-5n-JkG" id="Vdb-Xs-CTc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yqe-Jz-LVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2238" y="230"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="duD-Xd-wgw">
             <objects>
