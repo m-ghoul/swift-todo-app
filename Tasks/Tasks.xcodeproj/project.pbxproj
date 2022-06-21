@@ -46,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B6D0C6342861B44200E8ACBF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/TaskTrackerIntents.strings; sourceTree = "<group>"; };
+		B6D0C6352861B44200E8ACBF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		B6D4F896285B4D8300191089 /* TaskTrackerIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskTrackerIntent.entitlements; sourceTree = "<group>"; };
 		B6D7789D2859F6C100B53B51 /* Tasks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tasks.entitlements; sourceTree = "<group>"; };
 		B6D778A22859F71E00B53B51 /* TaskTrackerIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskTrackerIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +204,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = B6F51D202857767B0071A894;
 			productRefGroup = B6F51D2A2857767B0071A894 /* Products */;
@@ -272,6 +275,7 @@
 			children = (
 				B6E72006285AFB55005E4571 /* Base */,
 				B6E72009285AFB57005E4571 /* en */,
+				B6D0C6342861B44200E8ACBF /* ar */,
 			);
 			name = TaskTrackerIntents.intentdefinition;
 			sourceTree = "<group>";
@@ -280,6 +284,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B6F51D332857767B0071A894 /* Base */,
+				B6D0C6352861B44200E8ACBF /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -411,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

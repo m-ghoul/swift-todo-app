@@ -115,7 +115,13 @@ extension ViewController: INUIEditVoiceShortcutViewControllerDelegate {
 extension ViewController {
     public var intent: TaskTrackerIntent {
         let intent = TaskTrackerIntent()
-        intent.suggestedInvocationPhrase = "Add New Task"
+        let locale = NSLocale.current.languageCode
+        if locale == "ar"{
+            intent.suggestedInvocationPhrase = "أضف مهمة جديدة"
+        }
+        else {
+            intent.suggestedInvocationPhrase = "Add New Task"
+        }
         return intent
     }
 }
