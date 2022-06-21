@@ -4,10 +4,10 @@ import IntentsUI
 class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-
+    
     var tasks: [[String: Any]] = []
     let userDefaults = UserDefaults(suiteName: "group.org.qcri.Tasks")!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Tasks"
@@ -23,25 +23,21 @@ class ViewController: UIViewController {
     }
     
     func addSiriButton(to view: UIView) {
-            let button = INUIAddVoiceShortcutButton(style: .whiteOutline)
-            
-            button.shortcut = INShortcut(intent: intent )
-            button.delegate = self
-            
-            button.translatesAutoresizingMaskIntoConstraints = false
-            
-            view.addSubview(button)
-            view.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
-            view.centerYAnchor.constraint(equalTo: button.bottomAnchor).isActive = true
-
-        }
+        let button = INUIAddVoiceShortcutButton(style: .automaticOutline)
+        button.shortcut = INShortcut(intent: intent )
+        button.delegate = self
+        button.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(button)
+        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -75).isActive = true
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
         self.title = "Tasks"
         tableView.delegate = self
         tableView.dataSource = self
-
+        
         if let taskList = userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
             self.tasks = taskList
             self.tableView.reloadData()
@@ -119,7 +115,6 @@ extension ViewController: INUIEditVoiceShortcutViewControllerDelegate {
 extension ViewController {
     public var intent: TaskTrackerIntent {
         let intent = TaskTrackerIntent()
-        intent.title = "ADD TO SIRI TEST"
         intent.suggestedInvocationPhrase = "I have something new to do"
         return intent
     }
