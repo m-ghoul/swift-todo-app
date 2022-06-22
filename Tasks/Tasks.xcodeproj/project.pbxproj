@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B653B1EF286308C30053293A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B653B1F1286308C30053293A /* Localizable.strings */; };
 		B6D778A52859F71E00B53B51 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D778A42859F71E00B53B51 /* Intents.framework */; };
 		B6D778A82859F71E00B53B51 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D778A72859F71E00B53B51 /* IntentHandler.swift */; };
 		B6D778BD2859F71E00B53B51 /* TaskTrackerIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B6D778A22859F71E00B53B51 /* TaskTrackerIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -46,8 +47,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B653B1F0286308C30053293A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B653B1F2286308CE0053293A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6D0C6342861B44200E8ACBF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/TaskTrackerIntents.strings; sourceTree = "<group>"; };
-		B6D0C6352861B44200E8ACBF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		B6D4F896285B4D8300191089 /* TaskTrackerIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskTrackerIntent.entitlements; sourceTree = "<group>"; };
 		B6D7789D2859F6C100B53B51 /* Tasks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tasks.entitlements; sourceTree = "<group>"; };
 		B6D778A22859F71E00B53B51 /* TaskTrackerIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskTrackerIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,10 +109,10 @@
 		B6F51D202857767B0071A894 = {
 			isa = PBXGroup;
 			children = (
-				B6D778A62859F71E00B53B51 /* TaskTrackerIntent */,
 				B6D778A32859F71E00B53B51 /* Frameworks */,
 				B6F51D2A2857767B0071A894 /* Products */,
 				B6F51D2B2857767B0071A894 /* Tasks */,
+				B6D778A62859F71E00B53B51 /* TaskTrackerIntent */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +138,7 @@
 				B6F51D372857767F0071A894 /* LaunchScreen.storyboard */,
 				B6F51D3A2857767F0071A894 /* Info.plist */,
 				B6F51D402857802F0071A894 /* EntryViewController.swift */,
+				B653B1F1286308C30053293A /* Localizable.strings */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6F51D392857767F0071A894 /* LaunchScreen.storyboard in Resources */,
+				B653B1EF286308C30053293A /* Localizable.strings in Resources */,
 				B6F51D362857767F0071A894 /* Assets.xcassets in Resources */,
 				B6F51D342857767B0071A894 /* Main.storyboard in Resources */,
 			);
@@ -270,6 +274,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B653B1F1286308C30053293A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B653B1F0286308C30053293A /* en */,
+				B653B1F2286308CE0053293A /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B6E72007285AFB55005E4571 /* TaskTrackerIntents.intentdefinition */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +297,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				B6F51D332857767B0071A894 /* Base */,
-				B6D0C6352861B44200E8ACBF /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

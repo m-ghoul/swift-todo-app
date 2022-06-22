@@ -11,13 +11,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let locale = NSLocale.current.languageCode
-        if locale == "ar"{
-            self.title = "مهام"
-        }
-        else {
-            self.title = "Tasks"
-        }
+        self.title = "Tasks".localized()
+//        let locale = NSLocale.current.languageCode
+//        if locale == "ar"{
+//            self.title = "مهام"
+//        }
+//        else {
+//            self.title = "Tasks"
+//        }
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -41,13 +42,14 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
-        let locale = NSLocale.current.languageCode
-        if locale == "ar"{
-            self.title = "مهام"
-        }
-        else {
-            self.title = "Tasks"
-        }
+        self.title = "Tasks".localized()
+//        let locale = NSLocale.current.languageCode
+//        if locale == "ar"{
+//            self.title = "مهام"
+//        }
+//        else {
+//            self.title = "Tasks"
+//        }
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -61,13 +63,14 @@ class ViewController: UIViewController {
     
     @IBAction func didTapAdd() {
         let vc = storyboard?.instantiateViewController(identifier: "entry") as! EntryViewController
-        let locale = NSLocale.current.languageCode
-        if locale == "ar"{
-            vc.title = "مهمة جديدة"
-        }
-        else {
-            vc.title = "New Task"
-        }
+        vc.title = "New Task".localized()
+//        let locale = NSLocale.current.languageCode
+//        if locale == "ar"{
+//            vc.title = "مهمة جديدة"
+//        }
+//        else {
+//            vc.title = "New Task"
+//        }
         vc.completion = { success in
             if let taskList = self.userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
                 self.tasks = taskList
@@ -134,13 +137,20 @@ extension ViewController: INUIEditVoiceShortcutViewControllerDelegate {
 extension ViewController {
     public var intent: TaskTrackerIntent {
         let intent = TaskTrackerIntent()
-        let locale = NSLocale.current.languageCode
-        if locale == "ar"{
-            intent.suggestedInvocationPhrase = "أضف مهمة جديدة"
-        }
-        else {
-            intent.suggestedInvocationPhrase = "Add New Task"
-        }
+        intent.suggestedInvocationPhrase = "Add New Task".localized()
+//        let locale = NSLocale.current.languageCode
+//        if locale == "ar"{
+//            intent.suggestedInvocationPhrase = "أضف مهمة جديدة"
+//        }
+//        else {
+//            intent.suggestedInvocationPhrase = "Add New Task"
+//        }
         return intent
+    }
+}
+
+extension String {
+    func localized() -> String {
+        return NSLocalizedString(self, tableName: "Localizable", bundle: .main, value: self, comment: self)
     }
 }

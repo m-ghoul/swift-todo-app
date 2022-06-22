@@ -9,13 +9,15 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         field.delegate = self
         
-        let locale = NSLocale.current.languageCode
-        if locale == "ar"{
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "حفظ", style: .done, target: self, action: #selector(saveTask))
-        }
-        else {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveTask))
-        }
+        let title = "Save".localized()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: .done, target: self, action: #selector(saveTask))
+//        let locale = NSLocale.current.languageCode
+//        if locale == "ar"{
+//            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "حفظ", style: .done, target: self, action: #selector(saveTask))
+//        }
+//        else {
+//            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveTask))
+//        }
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
