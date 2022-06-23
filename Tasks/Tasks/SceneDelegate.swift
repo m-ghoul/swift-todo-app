@@ -7,19 +7,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
-        donateIntent()
+        donateAllIntents()
     }
     
-    private func donateIntent() {
-        let intent = TaskTrackerIntent()
-        intent.suggestedInvocationPhrase = "I have a new task to do"
-        let interaction = INInteraction(intent: intent, response: nil)
-        interaction.donate { (error) in
+    private func donateAllIntents() {
+        let englishIntent = TaskTrackerIntent()
+        englishIntent.suggestedInvocationPhrase = "Add New Task"
+        let englishInteraction = INInteraction(intent: englishIntent, response: nil)
+        englishInteraction.donate { (error) in
             if error != nil {
                 if let error = error as NSError? {
-                    print("Interaction donation failed: \(error.description)")
+                    print("English interaction donation failed: \(error.description)")
                 } else {
-                    print("Successfully donated interaction")
+                    print("English interaction donation successful")
+                }
+            }
+        }
+        
+        let arabicIntent = TaskTrackerArabicIntent()
+        arabicIntent.suggestedInvocationPhrase = "أضف مهمة جديدة"
+        let arabicInteraction = INInteraction(intent: arabicIntent, response: nil)
+        arabicInteraction.donate { (error) in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("Arabic interaction donation failed: \(error.description)")
+                } else {
+                    print("Arabic interaction donation successful")
                 }
             }
         }

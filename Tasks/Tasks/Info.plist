@@ -4,6 +4,7 @@
 <dict>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>TaskTrackerArabicIntent</string>
 		<string>TaskTrackerIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>

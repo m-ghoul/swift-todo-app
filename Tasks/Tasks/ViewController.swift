@@ -144,8 +144,8 @@ extension ViewController {
         return englishIntent
     }
     
-    public var arabicIntent: TaskTrackerIntent {
-        let arabicIntent = TaskTrackerIntent()
+    public var arabicIntent: TaskTrackerArabicIntent {
+        let arabicIntent = TaskTrackerArabicIntent()
         arabicIntent.suggestedInvocationPhrase = "أضف مهمة جديدة"
         return arabicIntent
     }

@@ -166,6 +166,150 @@
 			<key>INIntentVerb</key>
 			<string>Do</string>
 		</dict>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>generic</string>
+			<key>INIntentConfigurable</key>
+			<true/>
+			<key>INIntentDescription</key>
+			<string>أضف مهمة إلى قائمة المهام باستخدام أهداف Siri المخصصة</string>
+			<key>INIntentDescriptionID</key>
+			<string>dAGJpT</string>
+			<key>INIntentLastParameterTag</key>
+			<integer>1</integer>
+			<key>INIntentManagedParameterCombinations</key>
+			<dict>
+				<key>title</key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>أضف مهمة مع العنوان "${title}"</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>eJ5aW1</string>
+				</dict>
+			</dict>
+			<key>INIntentName</key>
+			<string>TaskTrackerArabic</string>
+			<key>INIntentParameterCombinations</key>
+			<dict>
+				<key></key>
+				<dict>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string>أضف مهمة جديدة إلى المهام</string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>Xn2TrE</string>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>أضف مهمة جديدة</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>24Ul4E</string>
+				</dict>
+			</dict>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>لقب</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>7Lbp9N</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>rsy44Q</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>title</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>ماذا تريد أن تسمى مهمتك الجديدة؟</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>562SrG</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>ماذا تريد أن تسمى مهمتك الجديدة؟</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>RhRdos</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>1</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
+			</array>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>النجاح! لديك الآن ${numberOfTasks} مهمة معلقة</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>XBllLf</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>تم إضافة مهمتك بنجاح إلى القائمة. لديك الآن ${numberOfTasks} مهمة معلقة</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>njd1mx</string>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+				</array>
+				<key>INIntentResponseLastParameterTag</key>
+				<integer>2</integer>
+				<key>INIntentResponseParameters</key>
+				<array>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>عدد المهام</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>d4jDHI</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>numberOfTasks</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>2</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>Integer</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>تعقب المهام</string>
+			<key>INIntentTitleID</key>
+			<string>HHZcTc</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>Do</string>
+		</dict>
 	</array>
 	<key>INTypes</key>
 	<array/>
