@@ -20,17 +20,41 @@ class ViewController: UIViewController {
             UserDefaults().set(0, forKey: "count")
         }
         
-        addSiriButton(to: view)
+        addSiriButtons(to: view)
     }
     
-    func addSiriButton(to view: UIView) {
-        let button = INUIAddVoiceShortcutButton(style: .automaticOutline)
-        button.shortcut = INShortcut(intent: intent )
-        button.delegate = self
-        button.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(button)
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -75).isActive = true
+    func addSiriButtons(to view: UIView) {
+        let englishLabel = UILabel()
+        englishLabel.textAlignment = .center
+        englishLabel.translatesAutoresizingMaskIntoConstraints = false
+        englishLabel.text = "English"
+        view.addSubview(englishLabel)
+        englishLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -85).isActive = true
+        englishLabel.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -125).isActive = true
+        
+        let englishButton = INUIAddVoiceShortcutButton(style: .automaticOutline)
+        englishButton.shortcut = INShortcut(intent: englishIntent )
+        englishButton.delegate = self
+        englishButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(englishButton)
+        englishButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -85).isActive = true
+        englishButton.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -75).isActive = true
+        
+        let arabicLabel = UILabel()
+        arabicLabel.textAlignment = .center
+        arabicLabel.text = "العربية"
+        arabicLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(arabicLabel)
+        arabicLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: +85).isActive = true
+        arabicLabel.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -125).isActive = true
+        
+        let arabicButton = INUIAddVoiceShortcutButton(style: .automaticOutline)
+        arabicButton.shortcut = INShortcut(intent: arabicIntent )
+        arabicButton.delegate = self
+        arabicButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(arabicButton)
+        arabicButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: +85).isActive = true
+        arabicButton.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -75).isActive = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +68,7 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
         
-        addSiriButton(to: view)
+        addSiriButtons(to: view)
     }
     
     @IBAction func didTapAdd() {
@@ -114,10 +138,16 @@ extension ViewController: INUIEditVoiceShortcutViewControllerDelegate {
 }
 
 extension ViewController {
-    public var intent: TaskTrackerIntent {
-        let intent = TaskTrackerIntent()
-        intent.suggestedInvocationPhrase = "Add New Task".localized()
-        return intent
+    public var englishIntent: TaskTrackerIntent {
+        let englishIntent = TaskTrackerIntent()
+        englishIntent.suggestedInvocationPhrase = "Add New Task"
+        return englishIntent
+    }
+    
+    public var arabicIntent: TaskTrackerIntent {
+        let arabicIntent = TaskTrackerIntent()
+        arabicIntent.suggestedInvocationPhrase = "أضف مهمة جديدة"
+        return arabicIntent
     }
 }
 
