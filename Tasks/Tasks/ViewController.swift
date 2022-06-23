@@ -12,13 +12,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Tasks".localized()
-//        let locale = NSLocale.current.languageCode
-//        if locale == "ar"{
-//            self.title = "مهام"
-//        }
-//        else {
-//            self.title = "Tasks"
-//        }
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -43,13 +36,6 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
         self.title = "Tasks".localized()
-//        let locale = NSLocale.current.languageCode
-//        if locale == "ar"{
-//            self.title = "مهام"
-//        }
-//        else {
-//            self.title = "Tasks"
-//        }
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -64,13 +50,6 @@ class ViewController: UIViewController {
     @IBAction func didTapAdd() {
         let vc = storyboard?.instantiateViewController(identifier: "entry") as! EntryViewController
         vc.title = "New Task".localized()
-//        let locale = NSLocale.current.languageCode
-//        if locale == "ar"{
-//            vc.title = "مهمة جديدة"
-//        }
-//        else {
-//            vc.title = "New Task"
-//        }
         vc.completion = { success in
             if let taskList = self.userDefaults.array(forKey: "TaskData") as? [[String: Any]] {
                 self.tasks = taskList
@@ -138,13 +117,6 @@ extension ViewController {
     public var intent: TaskTrackerIntent {
         let intent = TaskTrackerIntent()
         intent.suggestedInvocationPhrase = "Add New Task".localized()
-//        let locale = NSLocale.current.languageCode
-//        if locale == "ar"{
-//            intent.suggestedInvocationPhrase = "أضف مهمة جديدة"
-//        }
-//        else {
-//            intent.suggestedInvocationPhrase = "Add New Task"
-//        }
         return intent
     }
 }
