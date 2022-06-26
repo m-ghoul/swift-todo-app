@@ -138,9 +138,9 @@ extension ViewController: INUIEditVoiceShortcutViewControllerDelegate {
 }
 
 extension ViewController {
-    public var englishIntent: TaskTrackerIntent {
-        let englishIntent = TaskTrackerIntent()
-        englishIntent.suggestedInvocationPhrase = "Add New Task"
+    public var englishIntent: TaskTrackerWithIdIntent {
+        let englishIntent = TaskTrackerWithIdIntent()
+        englishIntent.suggestedInvocationPhrase = "Add New Task With Id"
         return englishIntent
     }
     
