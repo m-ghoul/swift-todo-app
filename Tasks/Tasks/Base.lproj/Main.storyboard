@@ -41,6 +41,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i2Q-zF-82p">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="SfB-fR-zNT">
+                            <connections>
+                                <action selector="didTapSettings" destination="BYZ-38-t0r" id="z1M-jk-NEc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="TJf-xA-hSC">
                             <connections>
                                 <action selector="didTapAdd" destination="BYZ-38-t0r" id="pOc-f7-WrP"/>
@@ -54,6 +59,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1286.9565217391305" y="229.6875"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Qwn-l0-eBE">
+            <objects>
+                <viewController storyboardIdentifier="settings" id="3as-wh-J9i" customClass="SettingsViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m3T-eg-Vbh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siri Shortcuts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVl-kG-6Nv">
+                                <rect key="frame" x="20" y="54" width="350" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGi-mU-Fca">
+                                <rect key="frame" x="20" y="88" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a task (with an ID)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAX-6B-Hg5">
+                                <rect key="frame" x="20" y="284" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NNM-Wz-7pi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sAX-6B-Hg5" firstAttribute="leading" secondItem="NNM-Wz-7pi" secondAttribute="leading" constant="20" id="4H3-rV-0OR"/>
+                            <constraint firstItem="sAX-6B-Hg5" firstAttribute="top" secondItem="uGi-mU-Fca" secondAttribute="bottom" constant="175" id="8ia-cT-g5B"/>
+                            <constraint firstItem="NNM-Wz-7pi" firstAttribute="trailing" secondItem="ZVl-kG-6Nv" secondAttribute="trailing" constant="20" id="Of9-0B-J5C"/>
+                            <constraint firstItem="ZVl-kG-6Nv" firstAttribute="leading" secondItem="NNM-Wz-7pi" secondAttribute="leading" constant="20" id="PRE-Xp-KRM"/>
+                            <constraint firstItem="uGi-mU-Fca" firstAttribute="top" secondItem="ZVl-kG-6Nv" secondAttribute="bottom" constant="10" id="knJ-z4-Y1i"/>
+                            <constraint firstItem="NNM-Wz-7pi" firstAttribute="trailing" secondItem="uGi-mU-Fca" secondAttribute="trailing" constant="20" id="kwo-YK-zve"/>
+                            <constraint firstItem="NNM-Wz-7pi" firstAttribute="trailing" secondItem="sAX-6B-Hg5" secondAttribute="trailing" constant="20" id="oHy-NV-7Ex"/>
+                            <constraint firstItem="ZVl-kG-6Nv" firstAttribute="top" secondItem="NNM-Wz-7pi" secondAttribute="top" constant="10" id="p73-Mi-Rxf"/>
+                            <constraint firstItem="uGi-mU-Fca" firstAttribute="leading" secondItem="NNM-Wz-7pi" secondAttribute="leading" constant="20" id="rr6-Xj-jj1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IWd-yd-BJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="230"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="Uak-mZ-hnv">

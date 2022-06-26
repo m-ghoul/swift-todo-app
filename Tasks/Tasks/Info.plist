@@ -6,6 +6,7 @@
 	<array>
 		<string>TaskTrackerArabicIntent</string>
 		<string>TaskTrackerIntent</string>
+		<string>TaskTrackerWithIdArabicIntent</string>
 		<string>TaskTrackerWithIdIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>

@@ -17,9 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         englishInteraction.donate { (error) in
             if error != nil {
                 if let error = error as NSError? {
-                    print("English interaction donation failed: \(error.description)")
+                    print("English interaction with 1 parameter donation failed: \(error.description)")
                 } else {
-                    print("English interaction donation successful")
+                    print("English interaction with 1 parameter donation successful")
                 }
             }
         }
@@ -30,9 +30,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         arabicInteraction.donate { (error) in
             if error != nil {
                 if let error = error as NSError? {
-                    print("Arabic interaction donation failed: \(error.description)")
+                    print("Arabic interaction with 1 parameter donation failed: \(error.description)")
                 } else {
-                    print("Arabic interaction donation successful")
+                    print("Arabic interaction with 1 parameter donation successful")
+                }
+            }
+        }
+        
+        let englishIntentWithId = TaskTrackerWithIdIntent()
+        englishIntentWithId.suggestedInvocationPhrase = "Add New Task With ID"
+        let englishInteractionWithId = INInteraction(intent: englishIntentWithId, response: nil)
+        englishInteractionWithId.donate { (error) in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("English interaction with 2 parameters donation failed: \(error.description)")
+                } else {
+                    print("English interaction with 2 parameters donation successful")
+                }
+            }
+        }
+        
+        let arabicIntentWithId = TaskTrackerWithIdArabicIntent()
+        arabicIntentWithId.suggestedInvocationPhrase = "Add New Task With ID"
+        let arabicInteractionWithId = INInteraction(intent: arabicIntentWithId, response: nil)
+        arabicInteractionWithId.donate { (error) in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("Arabic interaction with 2 parameters donation failed: \(error.description)")
+                } else {
+                    print("Arabic interaction with 2 parameters donation successful")
                 }
             }
         }
